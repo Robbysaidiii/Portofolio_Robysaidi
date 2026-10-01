@@ -1,0 +1,586 @@
+:root {
+  --page-bg: #111820;
+  --panel-bg: #040b14;
+  --ring: #212631;
+  --muted: #a8a9b4;
+  --accent: #3a82c1;
+}
+
+/* ---------- Dasar ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--page-bg);
+  color: #a8b0bb;
+}
+
+/* Navbar atas, warnanya disamakan dengan panel menu */
+.navbar.bg-black {
+  background-color: var(--panel-bg) !important;
+  border-bottom: 1px solid #1c2530;
+}
+
+/* ---------- Panel menu ---------- */
+.side-panel {
+  --bs-offcanvas-width: 300px;
+  --bs-offcanvas-bg: var(--panel-bg);
+  color: #fff;
+}
+
+.side-body { padding: 1rem 1.5rem 2rem; }
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid var(--ring);
+}
+
+.profile-name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ring);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background .2s;
+}
+
+.social-links a:hover { background: var(--accent); }
+
+.side-panel .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 8px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  transition: color .2s;
+}
+
+.side-panel .nav-link i { font-size: 1.4rem; }
+
+.side-panel .nav-link:hover,
+.side-panel .nav-link.active { color: #fff; }
+
+.side-panel .nav-link.active i { color: var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero-img {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
+}
+
+.hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  color: #fff;
+  margin-top: 1.5rem;
+}
+
+.hero-name {
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+.hero-sub {
+  font-size: 1.3rem;
+  color: #d5d9df;
+}
+
+.typed {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.hero-desc {
+  max-width: 720px;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+/* ---------- Timeline ---------- */
+.tl-item {
+  position: relative;
+  padding-left: 64px;
+}
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #18283a;
+}
+
+.tl-item::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.tl-year {
+  display: block;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: #8a919c;
+  padding-top: 8px;
+}
+
+.tl-item h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: .3rem 0;
+}
+
+.tl-item p {
+  margin: 0;
+  color: #a8b0bb;
+  line-height: 1.7;
+}
+
+/* ---------- Quote ---------- */
+.about-quote {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  line-height: 1.6;
+  color: #e3e6ea;
+  text-align: center;
+  max-width: 900px;
+  margin: 4rem auto;
+}
+
+/* ---------- Pill hobi ---------- */
+.pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border: 1px solid #263340;
+  border-radius: 50px;
+  background: #16202a;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.pill i {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+/* ---------- Resume ---------- */
+.resume-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #fff;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.resume-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--accent);
+}
+
+.resume-intro {
+  margin-top: 1.5rem;
+  max-width: 900px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #c9ced6;
+}
+
+.resume-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #fff;
+  margin: 1rem 0 1.5rem;
+}
+
+.resume-item {
+  position: relative;
+  padding: 0 0 1.5rem 2.5rem;
+  margin-bottom: 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--page-bg);
+  border: 2px solid var(--accent);
+}
+
+.resume-item h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #b4bac4;
+  margin: 0 0 .8rem;
+  line-height: 1.3;
+}
+
+.resume-year {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  margin: 0 0 .8rem 1rem;
+}
+
+.resume-italic {
+  font-style: italic;
+  color: #c9ced6;
+  line-height: 1.8;
+  margin-bottom: .8rem;
+}
+
+.resume-item p,
+.resume-item ul {
+  color: #a8b0bb;
+  line-height: 1.8;
+}
+
+.resume-item li {
+  margin-bottom: .5rem;
+}
+/* ---------- About ---------- */
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-top: 1rem;
+}
+
+.section-sub {
+  max-width: 700px;
+  line-height: 2;
+  font-size: 1.1rem;
+  color: #b4bac4;
+}
+
+.about-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  color: #8a919c;
+  margin-bottom: .75rem;
+}
+
+.about-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #c9ced6;
+}
+
+.about-text-strong {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #e8ebef;
+}
+
+/* Tombol */
+.btn-outline-accent {
+  display: inline-block;
+  padding: 14px 26px;
+  border: 1px solid #243242;
+  border-radius: 8px;
+  background: #15202b;
+  color: var(--accent);
+  text-decoration: none;
+  transition: background .2s, border-color .2s;
+}
+
+.btn-outline-accent:hover {
+  background: #1b2a39;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.link-accent {
+  color: var(--accent);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.link-accent:hover { color: #5aa0dc; }
+
+/* Foto */
+.about-img {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
+}
+
+/* Kartu */
+.feature-card {
+  height: 100%;
+  padding: 2rem;
+  background: #16202a;
+  border: 1px solid #263340;
+  border-radius: 12px;
+}
+
+.feature-card i {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+.feature-card h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 1.5rem 0 .5rem;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #a8b0bb;
+}
+
+/* ---------- Tombol kembali ke atas ---------- */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------- Certification ---------- */
+.cert-card {
+  height: 100%;
+  background: #16202a;
+  border: 1px solid #263340;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, border-color .2s;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.cert-thumb {
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: #0d141b;
+  overflow: hidden;
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cert-body {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.cert-body > i {
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+.cert-date {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: .85rem;
+  color: #8a919c;
+}
+
+.cert-body h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #fff;
+  margin: 1rem 0 .4rem;
+}
+
+.cert-body em {
+  display: block;
+  color: var(--accent);
+  font-size: .9rem;
+  margin-bottom: .6rem;
+}
+
+.cert-body p {
+  margin: 0;
+  color: #a8b0bb;
+  line-height: 1.7;
+  font-size: .95rem;
+}
+
+/* Tag keahlian di Home */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.hero-tags span {
+  padding: 8px 18px;
+  background: #16202a;
+  border: 1px solid #263340;
+  border-radius: 50px;
+  color: var(--accent);
+  font-size: .95rem;
+}
+/* ---------- Kontak ---------- */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #18283a;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.contact-item h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 0 .2rem;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #a8b0bb;
+}
+
+.contact-item a {
+  color: #a8b0bb;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
+.contact-cta {
+  height: 100%;
+  padding: 2rem;
+  background: #16202a;
+  border: 1px solid #263340;
+  border-radius: 12px;
+}
+
+.contact-cta h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.contact-cta p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}

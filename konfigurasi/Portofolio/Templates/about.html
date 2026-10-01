@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About | Roby{% endblock %}
+
+{% block content %}
+<section class="about">
+  <!-- Judul -->
+  <h2 class="section-title">About</h2>
+  <p class="section-sub text-center mx-auto">
+    Mahasiswa Teknik Informatika yang berfokus pada Data Science dan pengembangan web,
+    berdomisili di Jakarta Selatan.
+  </p>
+
+  <!-- Teks + Foto -->
+  <div class="row g-5 align-items-center mt-4">
+    <div class="col-lg-6">
+      <span class="about-label">Selamat datang</span>
+      <h3 class="about-heading">
+        Halo, saya Roby, Junior Data Scientist &amp; Junior Web Developer
+      </h3>
+      <p class="about-text">
+        Mahasiswa semester akhir Teknik Informatika di Universitas Indraprasta PGRI. 
+        Saya berpengalaman membangun model machine learning dan computer
+        vision melalui program AI4JOBS dan Coding Camp powered by DBS Foundation.
+      </p>
+      <p class="about-text-strong">
+        Mempunyai sertifikasi BNSP Pengembang Web Pertama Junior Web Developer
+        dari program Digital Talent Scholarship Kominfo. Saat ini saya sedang mengerjakan
+        TireScan, aplikasi klasifikasi kerusakan ban sebagai tugas akhir.
+      </p>
+
+      <div class="d-flex flex-wrap align-items-center gap-4 mt-4">
+        <a href="#skills" class="btn-outline-accent">
+          Lihat Keahlian <i class="bi bi-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-lg-6 text-center">
+      <img src="{% static 'images/roby.jpeg' %}" alt="Roby Saidi Prasetyo" class="about-img img-fluid">
+    </div>
+  </div>
+
+  <!-- Kartu bidang keahlian -->
+  <div class="row g-4 mt-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="feature-card">
+        <i class="bi bi-diagram-3"></i>
+        <h4>Convolutional Neural Network</h4>
+        <p>Klasifikasi citra dengan arsitektur CNN, seperti MobileNetV2 menggunakan TensorFlow/Keras.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="feature-card">
+        <i class="bi bi-bounding-box"></i>
+        <h4>Model Klasik: SVM</h4>
+        <p>Support Vector Machine untuk klasifikasi pada sistem Face Recognition dan TireScan.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="feature-card">
+        <i class="bi bi-grid-3x3-gap"></i>
+        <h4>Histogram of Oriented Gradients</h4>
+        <p>Ekstraksi fitur HOG dari citra sebagai masukan model machine learning klasik.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="feature-card">
+        <i class="bi bi-chat-square-text"></i>
+        <h4>Natural Language Processing</h4>
+        <p>Pemrosesan dan analisis data teks, mulai dari pembersihan hingga pemodelan.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="feature-card">
+        <i class="bi bi-graph-up-arrow"></i>
+        <h4>Data Science</h4>
+        <p>Analisis data dan alur kerja machine learning dari data mentah hingga model siap pakai.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="feature-card">
+        <i class="bi bi-code-slash"></i>
+        <h4>Web Development</h4>
+        <p>Pengembangan aplikasi web dengan Python dan Django serta tampilan responsif.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Perjalanan -->
+  <div class="row g-4 mt-5 timeline">
+    <div class="col-md-6">
+      <div class="tl-item">
+        <span class="tl-year">2022</span>
+        <h4>Memulai Perkuliahan</h4>
+        <p>Teknik Informatika, Universitas Indraprasta PGRI.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="tl-item">
+        <span class="tl-year">2024</span>
+        <h4>MSIB: AI4JOBS</h4>
+        <p>Membangun sistem Face Recognition dengan HOG dan SVM, akurasi 85%.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="tl-item">
+        <span class="tl-year">2025</span>
+        <h4>Coding Camp DBS Foundation</h4>
+        <p>Machine Learning Engineer, klasifikasi citra dengan MobileNetV2 (CNN), akurasi 95%.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="tl-item">
+        <span class="tl-year">2025</span>
+        <h4>Sertifikasi BNSP</h4>
+        <p>Kompetensi Pengembang Web Pratama (Junior Web Developer).</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="tl-item">
+        <span class="tl-year">2026</span>
+        <h4>TireScan</h4>
+        <p>Tugas akhir: klasifikasi kerusakan ban dengan SVM.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="tl-item">
+        <span class="tl-year">2026</span>
+        <h4>Lulus &amp; Siap Berkarier</h4>
+        <p>Menyelesaikan skripsi dan siap berkontribusi di bidang data dan web.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kutipan -->
+  <p class="about-quote">
+    "Mengubah data dan kode menjadi sesuatu yang bermanfaat, dimulai dari hal kecil yang dikerjakan dengan teliti."
+  </p>
+
+  <!-- Tools -->
+  <div class="row g-3">
+    <div class="col-6 col-lg-3"><div class="pill"><i class="bi bi-filetype-py"></i> Python</div></div>
+    <div class="col-6 col-lg-3"><div class="pill"><i class="bi bi-database"></i> PostgreSQL</div></div>
+    <div class="col-6 col-lg-3"><div class="pill"><i class="bi bi-cpu"></i> TensorFlow</div></div>
+    <div class="col-6 col-lg-3"><div class="pill"><i class="bi bi-github"></i> Git/GitHub</div></div>
+  </div>
+
+  <!-- Keahlian -->
+  <div id="skills" class="mt-5 pt-5">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-sub text-center mx-auto">
+      Teknologi dan metode yang saya gunakan dalam pengolahan data dan pengembangan web.
+    </p>
+
+    <div class="row g-4 mt-4">
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>Python</h4>
+          <p>Pandas, NumPy, dan pemrosesan data untuk machine learning.</p>
+          <div class="skill-percent">85%</div>
+          <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>CNN (Deep Learning)</h4>
+          <p>Klasifikasi citra dengan MobileNetV2 menggunakan TensorFlow/Keras.</p>
+          <div class="skill-percent">75%</div>
+          <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>Model Klasik: SVM</h4>
+          <p>Support Vector Machine dengan Scikit-learn untuk klasifikasi citra.</p>
+          <div class="skill-percent">80%</div>
+          <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>Histogram of Oriented Gradients</h4>
+          <p>Ekstraksi fitur HOG dengan OpenCV, praproses, dan augmentasi citra.</p>
+          <div class="skill-percent">75%</div>
+          <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>Natural Language Processing</h4>
+          <p>Dasar-dasar pemrosesan teks dan klasifikasi teks.</p>
+          <div class="skill-percent">50%</div>
+          <div class="progress"><div class="progress-bar" style="width: 50%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>Django &amp; Web</h4>
+          <p>Backend Django, HTML, CSS, dan Bootstrap.</p>
+          <div class="skill-percent">70%</div>
+          <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>postgresql</h4>
+          <p>Query dan pengelolaan data relasional.</p>
+          <div class="skill-percent">70%</div>
+          <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-card">
+          <h4>Git/GitHub</h4>
+          <p>Version control dan kolaborasi dalam tim.</p>
+          <div class="skill-percent">70%</div>
+          <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

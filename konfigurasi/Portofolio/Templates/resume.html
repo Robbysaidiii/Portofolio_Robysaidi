@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume | Roby{% endblock %}
+
+{% block content %}
+<section class="resume">
+  <h2 class="resume-title">Resume</h2>
+  <p class="resume-intro">
+    Mahasiswa Teknik Informatika dengan fokus pada Data Science dan pengembangan web.
+    Berpengalaman membangun model machine learning melalui program AI4JOBS dan
+    Coding Camp DBS Foundation.
+  </p>
+
+  <div class="row g-5 mt-2">
+    <!-- Kiri -->
+    <div class="col-lg-6">
+      <h3 class="resume-heading">Summary</h3>
+      <div class="resume-item">
+        <h4>Roby Saidi Prasetyo</h4>
+        <p class="resume-italic">
+          Junior Data Scientist dan Junior Web Developer. Bersertifikasi BNSP skema Junior Data
+          Scientist dan Pengembang Web Pertama Junior Web Developer dari program Digital Talent Scholarship Kominfo.
+        </p>
+        <ul>
+          <li>Jakarta Selatan, DKI Jakarta</li>
+          <li>robbysaidiii@gmail.com</li>
+          <li>robysaidiprasetyo.netlify.app</li>
+        </ul>
+      </div>
+
+      <h3 class="resume-heading">Education</h3>
+      <div class="resume-item">
+        <h4>Teknik Informatika</h4>
+        <h5 class="resume-year">Sep 2022 - Dec 2026</h5>
+        <p class="resume-italic">Universitas Indraprasta PGRI (UNINDRA) | IPK 3,57</p>
+        <p>Semester akhir, sedang menyusun skripsi (klasifikasi kerusakan ban, TireScan).</p>
+      </div>
+
+    <!-- Kanan -->
+    <div class="col-lg-6">
+      <h3 class="resume-heading">Professional Experience</h3>
+
+      <div class="resume-item">
+        <h4>Coding Camp powered by DBS Foundation</h4>
+        <h5 class="resume-year">Mar 2025 - Jul 2025</h5>
+        <p class="resume-italic">Dicoding, Machine Learning Engineer</p>
+        <ul>
+          <li>Mengumpulkan dataset citra daging (sapi, ayam, kuda, ikan) via web scraping, 590 gambar.</li>
+          <li>Augmentasi data menjadi ±10.000 citra untuk memperkuat generalisasi model.</li>
+          <li>Berkontribusi pada model klasifikasi berbasis MobileNetV2 dengan akurasi 95%.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h4>Studi Independen Bersertifikat (MSIB)</h4>
+        <h5 class="resume-year">Aug 2024 - Dec 2024</h5>
+        <p class="resume-italic">Kampus Merdeka, mitra AI4JOBS PT Orbit Ventura Indonesia</p>
+        <ul>
+          <li>Membangun sistem Face Recognition dengan HOG dan SVM, akurasi klasifikasi 85%.</li>
+          <li>Praproses dan augmentasi 2.000 citra wajah siswa untuk meningkatkan performa model.</li>
+          <li>Mempercepat training dengan membagi citra ke grid 16x16 piksel.</li>
+        </ul>
+      </div>
+
+      <h3 class="resume-heading">Projects</h3>
+      <div class="resume-item">
+        <h4>TireScan: Klasifikasi Kerusakan Ban</h4>
+        <h5 class="resume-year">Jan 2026 - Aug 2026</h5>
+        <p class="resume-italic">Tugas Akhir</p>
+        <ul>
+          <li>Aplikasi klasifikasi kondisi ban ke 3 kelas: retak, normal, dan robek.</li>
+          <li>Data dari Kaggle dan Bengkel Jagoban, augmentasi jadi 500 citra per kelas (total 1.500).</li>
+          <li>Resize 64x64 piksel, model SVM dengan akurasi 75%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{% static 'files/CV_RobySaidiPrasetyo.pdf' %}" download class="btn btn-primary">
+      <i class="bi bi-download"></i> Download CV
+    </a>
+  </div>
+</section>
+{% endblock %}

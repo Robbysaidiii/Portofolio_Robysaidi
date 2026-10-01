@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Certification | Roby{% endblock %}
+
+{% block content %}
+<section class="certs">
+  <h2 class="section-title">Certification</h2>
+  <p class="section-sub text-center mx-auto">
+    Sertifikat dan pencapaian dari program yang sudah gua selesaikan.
+  </p>
+
+  <div class="row g-4 mt-4">
+    {% for c in certs %}
+    <div class="col-md-6 col-lg-4">
+      <div class="cert-card">
+        {% if c.image %}
+        <a href="{% static c.image %}" target="_blank" class="cert-thumb">
+          <img src="{% static c.image %}" alt="{{ c.title }}" loading="lazy">
+        </a>
+        {% endif %}
+        <div class="cert-body">
+          <i class="bi {{ c.icon }}"></i>
+          <span class="cert-date">{{ c.date }}</span>
+          <h4>{{ c.title }}</h4>
+          <em>{{ c.issuer }}</em>
+          <p>{{ c.desc }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

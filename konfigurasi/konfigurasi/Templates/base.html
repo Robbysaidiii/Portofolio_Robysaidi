@@ -1,0 +1,71 @@
+{% load static %}
+<!doctype html>
+<html lang="id" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Portofolio Roby{% endblock %}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <nav class="navbar bg-black fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">Roby Saidi Prasetyo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+       <div class="offcanvas offcanvas-start side-panel" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <span id="offcanvasNavbarLabel" class="visually-hidden">Menu</span>
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body side-body">
+            <!-- Profil -->
+            <div class="text-center">
+              <img src="{% static 'images/roby.jpeg' %}" alt="Roby Saidi Prasetyo" class="profile-img">
+              <h2 class="profile-name">Roby Saidi Prasetyo</h2>
+              <div class="social-links">
+                <a href="https://x.com/RSaidiii39254" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://facebook.com/username" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/robysaidii/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/robysaidiprasetyo/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+
+            <!-- Menu -->
+            <ul class="navbar-nav flex-grow-1 mt-4">
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}"><i class="bi bi-house"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}"><i class="bi bi-person"></i> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'resume' %}active{% endif %}" href="{% url 'resume' %}"><i class="bi bi-lightning-charge"></i> Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'Certification' %}active{% endif %}" href="{% url 'Certification' %}"><i class="bi bi-patch-check"></i> Certification</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'kontak' %}active{% endif %}" href="{% url 'kontak' %}"><i class="bi bi-envelope"></i> Kontak</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5 pt-4">
+      {% block content %}{% endblock %}
+    </main>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" ...></script>
+    {% block extra_js %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

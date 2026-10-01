@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Roby{% endblock %}
+
+{% block content %}
+<section class="hero text-center">
+  <img src="{% static 'images/roby.jpeg' %}" alt="Roby Saidi Prasetyo" class="hero-img img-fluid">
+
+  <h1 class="hero-title">Hello, I'm <span class="hero-name">Roby Saidi Prasetyo</span></h1>
+
+  <p class="hero-sub">Creative <span class="typed"></span></p>
+
+ <p class="hero-desc mx-auto">
+    Lulusan baru Teknik Informatika Universitas Indraprasta PGRI,
+    yang sedang mencari posisi Junior Data Scientist atau Junior Web Developer.
+    Saya berpengalaman membangun model machine learning dan computer vision melalui
+    AI4JOBS dan Coding Camp powered by DBS Foundation, serta bersertifikasi BNSP.
+    Saya siap belajar cepat dan berkontribusi dalam tim.
+  </p>
+  <a href="{% url 'about' %}" class="btn btn-primary mt-3">Pelajari Lebih Lanjut</a>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  new Typed('.typed', {
+    strings: ['Web Developer', 'Python Developer', 'Django Developer'],
+    typeSpeed: 70,
+    backSpeed: 40,
+    backDelay: 1500,
+    loop: true
+  });
+</script>
+{% endblock %}
